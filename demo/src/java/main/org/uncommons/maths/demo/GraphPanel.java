@@ -31,7 +31,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 /**
  * @author Daniel Dyer
  */
-class GraphPanel extends JPanel
+public class GraphPanel extends JPanel
 {
     private final ChartPanel chartPanel = new ChartPanel(null);
 

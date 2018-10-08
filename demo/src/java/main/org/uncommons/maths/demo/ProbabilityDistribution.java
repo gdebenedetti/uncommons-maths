@@ -26,7 +26,7 @@ import org.uncommons.maths.number.NumberGenerator;
  * values that follow this distribution.
  * @author Daniel Dyer
  */
-abstract class ProbabilityDistribution
+public abstract class ProbabilityDistribution
 {
     protected abstract NumberGenerator<?> createValueGenerator(Random rng);
 

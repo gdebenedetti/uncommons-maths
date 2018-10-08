@@ -40,7 +40,7 @@ import org.uncommons.swing.SpringUtilities;
  * to generate.
  * @author Daniel Dyer
  */
-class RNGPanel extends JPanel
+public class RNGPanel extends JPanel
 {
     private final JComboBox rngCombo = new JComboBox();
     private final SpinnerNumberModel iterationsNumberModel = new SpinnerNumberModel(10000, 10, 1000000, 100);

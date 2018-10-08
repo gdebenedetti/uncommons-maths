@@ -31,7 +31,7 @@ import javax.swing.JPanel;
  * configuration options for each distribution.
  * @author Daniel Dyer
  */
-class DistributionPanel extends JPanel
+public class DistributionPanel extends JPanel
 {
     private final SortedMap<String, ParametersPanel> parameterPanels = new TreeMap<String, ParametersPanel>();
     private final JComboBox distributionCombo = new JComboBox();
