@@ -17,9 +17,10 @@ package org.uncommons.maths.demo;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
+
 import org.uncommons.maths.Maths;
 import org.uncommons.maths.random.BinomialGenerator;
 
@@ -41,7 +42,7 @@ class BinomialDistribution extends ProbabilityDistribution
 
     public Map<Double, Double> getExpectedValues()
     {
-        Map<Double, Double> values = new HashMap<Double, Double>();
+        Map<Double, Double> values = new LinkedHashMap<Double, Double>();
         for (int i = 0; i <= n; i++)
         {
             values.put((double) i, getExpectedProbability(i));

@@ -15,9 +15,10 @@
 // ============================================================================
 package org.uncommons.maths.demo;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
+
 import org.uncommons.maths.random.DiscreteUniformGenerator;
 
 /**
@@ -37,7 +38,7 @@ class UniformDistribution extends ProbabilityDistribution
 
     public Map<Double, Double> getExpectedValues()
     {
-        Map<Double, Double> values = new HashMap<Double, Double>();
+        Map<Double, Double> values = new LinkedHashMap<Double, Double>();
         for (int i = min; i <= max; i++)
         {
             values.put((double) i, 1d / ((max - min) + 1));

@@ -17,9 +17,10 @@ package org.uncommons.maths.demo;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
+
 import org.uncommons.maths.Maths;
 import org.uncommons.maths.random.PoissonGenerator;
 
@@ -38,7 +39,7 @@ class PoissonDistribution extends ProbabilityDistribution
 
     public Map<Double, Double> getExpectedValues()
     {
-        Map<Double, Double> values = new HashMap<Double, Double>();
+        Map<Double, Double> values = new LinkedHashMap<Double, Double>();
         int index = 0;
         double p;
         do
