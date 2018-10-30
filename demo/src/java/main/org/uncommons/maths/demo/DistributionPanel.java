@@ -42,6 +42,7 @@ public class DistributionPanel extends JPanel
         parameterPanels.put("Gaussian", new GaussianParametersPanel());
         parameterPanels.put("Poisson", new PoissonParametersPanel());
         parameterPanels.put("Uniform", new UniformParametersPanel());
+        parameterPanels.put("Linear", new LinearParametersPanel());
     }
 
     
