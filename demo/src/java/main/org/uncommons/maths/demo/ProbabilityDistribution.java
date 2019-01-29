@@ -15,9 +15,11 @@
 // ============================================================================
 package org.uncommons.maths.demo;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
+import java.util.TreeMap;
+
 import org.uncommons.maths.number.NumberGenerator;
 
 /**
@@ -53,7 +55,7 @@ public abstract class ProbabilityDistribution
                                                        Random rng)
     {
         NumberGenerator<?> generator = createValueGenerator(rng);
-        Map<Double, Double> values = new HashMap<Double, Double>();
+        Map<Double, Double> values = new TreeMap<Double, Double>();
         for (int i = 0; i < count; i++)
         {
             double value = generator.nextValue().doubleValue();
@@ -102,7 +104,7 @@ public abstract class ProbabilityDistribution
             assert interval >= 0 && interval < noIntervals : "Invalid interval: " + interval;
             ++intervals[interval];
         }
-        Map<Double, Double> discretisedValues = new HashMap<Double, Double>();
+        Map<Double, Double> discretisedValues = new LinkedHashMap<Double, Double>();
         for (int i = 0; i < intervals.length; i++)
         {
             // Correct the value to take into account the size of the interval.
