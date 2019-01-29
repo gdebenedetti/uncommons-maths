@@ -26,18 +26,16 @@ import javax.swing.SpringLayout;
 import org.uncommons.swing.SpringUtilities;
 
 /**
- * @author gdebenedetti
+ * @author Guido De Benedetti
  */
-class LinearParametersPanel extends ParametersPanel
+class LinearEquationParametersPanel extends ParametersPanel
 {
     private final SpinnerNumberModel minXNumberModel = new SpinnerNumberModel(-10, -100, 100, 1);
     private final SpinnerNumberModel maxXNumberModel = new SpinnerNumberModel(10, -100, 100, 1);
-    private final SpinnerNumberModel minYNumberModel = new SpinnerNumberModel(-10, -100, 100, 1);
-    private final SpinnerNumberModel maxYNumberModel = new SpinnerNumberModel(10, -100, 100, 1);
     private final SpinnerNumberModel slopeNumberModel = new SpinnerNumberModel(2.0d, -100d, 100.0d, 0.1d);
     private final SpinnerNumberModel interceptNumberModel = new SpinnerNumberModel(-2.0d, -100d, 100.0d, 0.1d);
 
-    public LinearParametersPanel()
+    public LinearEquationParametersPanel()
     {
         JPanel wrapper = new JPanel(new SpringLayout());
         wrapper.add(new JLabel("Minimum X: "));
@@ -48,14 +46,14 @@ class LinearParametersPanel extends ParametersPanel
         wrapper.add(new JSpinner(slopeNumberModel));
         wrapper.add(new JLabel("Intercept: "));
         wrapper.add(new JSpinner(interceptNumberModel));
-        SpringUtilities.makeCompactGrid(wrapper, 8, 1, 6, 6, 6, 6);
+        SpringUtilities.makeCompactGrid(wrapper, 8, 1, 5, 5, 5, 5);
         add(wrapper, BorderLayout.NORTH);
     }
 
 
-    public LinearDistribution createProbabilityDistribution()
+    public LinearEquationDistribution createProbabilityDistribution()
     {
-		return new LinearDistribution(minXNumberModel.getNumber().intValue(), maxXNumberModel.getNumber().intValue(),
+		return new LinearEquationDistribution(minXNumberModel.getNumber().intValue(), maxXNumberModel.getNumber().intValue(),
 				slopeNumberModel.getNumber().doubleValue(), interceptNumberModel.getNumber().doubleValue());
     }
 }

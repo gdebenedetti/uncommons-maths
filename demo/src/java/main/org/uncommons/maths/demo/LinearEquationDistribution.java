@@ -24,14 +24,14 @@ import org.uncommons.maths.random.DiscreteUniformGenerator;
 /**
  * @author gdebenedetti
  */
-class LinearDistribution extends ProbabilityDistribution
+class LinearEquationDistribution extends ProbabilityDistribution
 {
     private final int minX;
     private final int maxX;
     private final double slope;
     private final double intercept;
 
-    public LinearDistribution(int minX, int maxX, double slope, double intercept)
+    public LinearEquationDistribution(int minX, int maxX, double slope, double intercept)
     {
         this.minX = minX;
         this.maxX = maxX;
@@ -72,6 +72,6 @@ class LinearDistribution extends ProbabilityDistribution
 
     public boolean isDiscrete()
     {
-        return true;
+        return false;
     }    
 }
