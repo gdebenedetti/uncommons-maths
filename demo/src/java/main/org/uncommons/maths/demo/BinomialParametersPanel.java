@@ -38,7 +38,7 @@ class BinomialParametersPanel extends ParametersPanel
         wrapper.add(new JSpinner(trialsNumberModel));
         wrapper.add(new JLabel("Probability: "));
         wrapper.add(new JSpinner(probabilityNumberModel));
-        SpringUtilities.makeCompactGrid(wrapper, 4, 1, 6, 6, 6, 6);
+        SpringUtilities.makeCompactGrid(wrapper, 4, 1, 5, 5, 5, 5);
         add(wrapper, BorderLayout.NORTH);
     }
 

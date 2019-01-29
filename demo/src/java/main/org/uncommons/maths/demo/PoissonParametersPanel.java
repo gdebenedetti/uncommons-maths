@@ -35,7 +35,7 @@ class PoissonParametersPanel extends ParametersPanel
         JPanel wrapper = new JPanel(new SpringLayout());
         wrapper.add(new JLabel("Mean: "));
         wrapper.add(new JSpinner(meanNumberModel));
-        SpringUtilities.makeCompactGrid(wrapper, 2, 1, 6, 6, 6, 6);
+        SpringUtilities.makeCompactGrid(wrapper, 2, 1, 5, 5, 5, 5);
         add(wrapper, BorderLayout.NORTH);
     }
 

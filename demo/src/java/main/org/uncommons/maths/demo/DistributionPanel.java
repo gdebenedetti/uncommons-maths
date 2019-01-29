@@ -42,7 +42,7 @@ public class DistributionPanel extends JPanel
         parameterPanels.put("Gaussian", new GaussianParametersPanel());
         parameterPanels.put("Poisson", new PoissonParametersPanel());
         parameterPanels.put("Uniform", new UniformParametersPanel());
-        parameterPanels.put("Linear", new LinearParametersPanel());
+        parameterPanels.put("LinearEquation", new LinearEquationParametersPanel());
     }
 
     
@@ -67,7 +67,7 @@ public class DistributionPanel extends JPanel
             }
         });
 
-        add(distributionCombo, BorderLayout.NORTH);
+        add(distributionCombo, BorderLayout.PAGE_START);
         add(parametersPanel, BorderLayout.CENTER);
         setBorder(BorderFactory.createTitledBorder("Probability Distribution"));
     }

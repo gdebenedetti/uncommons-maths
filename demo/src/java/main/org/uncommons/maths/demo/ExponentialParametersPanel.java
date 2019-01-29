@@ -35,7 +35,7 @@ class ExponentialParametersPanel extends ParametersPanel
         JPanel wrapper = new JPanel(new SpringLayout());
         wrapper.add(new JLabel("Rate: "));
         wrapper.add(new JSpinner(rateNumberModel));
-        SpringUtilities.makeCompactGrid(wrapper, 2, 1, 6, 6, 6, 6);
+        SpringUtilities.makeCompactGrid(wrapper, 2, 1, 5, 5, 5, 5);
         add(wrapper, BorderLayout.NORTH);
     }
 

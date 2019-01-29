@@ -29,7 +29,7 @@ import org.uncommons.swing.SpringUtilities;
 class UniformParametersPanel extends ParametersPanel
 {
     private final SpinnerNumberModel minNumberModel = new SpinnerNumberModel(1, 0, 100, 1);
-    private final SpinnerNumberModel maxNumberModel = new SpinnerNumberModel(10, 1, 100, 1);
+    private final SpinnerNumberModel maxNumberModel = new SpinnerNumberModel(25, 1, 100, 1);
 
     public UniformParametersPanel()
     {
@@ -38,7 +38,7 @@ class UniformParametersPanel extends ParametersPanel
         wrapper.add(new JSpinner(minNumberModel));
         wrapper.add(new JLabel("Maximum: "));
         wrapper.add(new JSpinner(maxNumberModel));
-        SpringUtilities.makeCompactGrid(wrapper, 4, 1, 6, 6, 6, 6);
+        SpringUtilities.makeCompactGrid(wrapper, 4, 1, 5, 5, 5, 5);
         add(wrapper, BorderLayout.NORTH);
     }
 

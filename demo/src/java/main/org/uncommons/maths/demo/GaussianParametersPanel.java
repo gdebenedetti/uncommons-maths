@@ -38,7 +38,7 @@ class GaussianParametersPanel extends ParametersPanel
         wrapper.add(new JSpinner(meanNumberModel));
         wrapper.add(new JLabel("Standard Deviation: "));
         wrapper.add(new JSpinner(deviationNumberModel));
-        SpringUtilities.makeCompactGrid(wrapper, 4, 1, 6, 6, 6, 6);
+        SpringUtilities.makeCompactGrid(wrapper, 4, 1, 5, 5, 5, 5);
         add(wrapper, BorderLayout.NORTH);
     }
 
