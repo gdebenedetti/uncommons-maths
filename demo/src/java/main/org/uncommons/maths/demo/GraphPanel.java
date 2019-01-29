@@ -50,15 +50,19 @@ public class GraphPanel extends JPanel
                               boolean discrete)
     {
         XYSeriesCollection dataSet = new XYSeriesCollection();
-        XYSeries observedSeries = new XYSeries("Observed");
-        dataSet.addSeries(observedSeries);
         XYSeries expectedSeries = new XYSeries("Expected");
         dataSet.addSeries(expectedSeries);
 
-        for (Map.Entry<Double, Double> entry : observedValues.entrySet())
+        if(observedValues != null)
         {
-            observedSeries.add(entry.getKey(), entry.getValue());
+        	XYSeries observedSeries = new XYSeries("Observed");
+            dataSet.addSeries(observedSeries);
+        	for (Map.Entry<Double, Double> entry : observedValues.entrySet())
+            {
+                observedSeries.add(entry.getKey(), entry.getValue());
+            }	
         }
+        
 
         for (Map.Entry<Double, Double> entry : expectedValues.entrySet())
         {
